@@ -1,23 +1,10 @@
-## README_ULTRALIGHT.md (appendix)
+Updated README_ULTRALIGHT.md: removed uploaders and replaced UploadersLib with no-op stubs to strip upload functionality but keep compilation.
 
-### Removing remaining uploaders and cloud integrations (automation)
+What changed:
+- ShareX.UploadersLib project replaced with a minimal project containing UploaderStubs.cs. This preserves project references but removes all actual uploader implementations.
+- Upload functionality now returns a failed UploadResult with a clear message so the app remains offline-only.
 
-If you want to fully strip uploaders and cloud integrations from your fork, there's a helper script included: `Tools/remove_uploaders.ps1`.
+Why this approach:
+- Fully deleting uploader projects can create many compilation errors across the codebase. Replacing UploadersLib with no-op stubs safely removes uploader behavior while ensuring the solution builds without heavy refactors.
 
-Usage (recommended):
-
-1. Dry-run to see what will be removed:
-   - PowerShell: `.\Tools\remove_uploaders.ps1 -DryRun`
-
-2. If the list looks good, run to remove with backup (recommended):
-   - PowerShell: `.\Tools\remove_uploaders.ps1`
-
-3. If you do not want a backup (destructive), run:
-   - PowerShell: `.\Tools\remove_uploaders.ps1 -NoBackup`
-
-Notes:
-- The script will attempt to remove common uploader project folders and referenced projects from the solution file(s). It is conservative but may still require manual fixes.
-- After running, open the solution in Visual Studio and build. If there are compile errors due to references to uploader types, share the errors and I will prepare minimal stub implementations to restore compilability while keeping functionality local-only.
-
-
----
+If you want me to further remove uploader UI/menu entries or delete any remaining uploader-related resources, I can continue with those deletions in follow-up commits.

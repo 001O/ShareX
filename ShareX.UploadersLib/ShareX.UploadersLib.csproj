@@ -3,17 +3,9 @@
     <TargetFramework>net9.0-windows</TargetFramework>
     <OutputType>Library</OutputType>
     <UseWindowsForms>true</UseWindowsForms>
-    <ForceDesignerDpiUnaware>true</ForceDesignerDpiUnaware>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="FluentFTP" />
-    <PackageReference Include="Newtonsoft.Json" />
-    <PackageReference Include="SSH.NET" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ShareX.HelpersLib\ShareX.HelpersLib.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\OAuthCallbackPage.html" />
+    <Compile Include="UploaderStubs.cs" />
   </ItemGroup>
 </Project>
