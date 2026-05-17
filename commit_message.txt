@@ -1,0 +1,1 @@
+Add automation script to remove uploader/cloud integration projects and update README with instructions
