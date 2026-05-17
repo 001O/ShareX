@@ -1,0 +1,23 @@
+{
+  "ProfileName": "UltraLightLocal",
+  "SavePath": "%USERPROFILE%\\Pictures\\ShareX-UltraLight",
+  "AfterCaptureTasks": [
+    "SaveImageToFile"
+  ],
+  "AfterRecordingTasks": [
+    "SaveVideoToFile"
+  ],
+  "EnabledUploaders": [],
+  "AutoUpdate": false,
+  "TelemetryEnabled": false,
+  "CheckForUpdatesOnStartup": false,
+  "UseCloudSettings": false,
+  "DefaultImageFormat": "png",
+  "DefaultVideoFormat": "mp4",
+  "FFmpegPath": "Tools\\ffmpeg\\ffmpeg.exe",
+  "Hotkeys": {
+    "CaptureFullScreen": "PrintScreen",
+    "CaptureRegion": "Ctrl+PrintScreen",
+    "StartStopRecording": "Shift+PrintScreen"
+  }
+}
